@@ -16,6 +16,7 @@ div.container1 p {
 	left: 50%;
 	margin-right: -50%;
 	transform: translate(-50%, -50%);
+	font-family: helvetica;
 	font-size: 48
 }
 
@@ -26,4 +27,20 @@ div.container1 p {
 	bottom: 5%;
 	width: 100%;
 	text-align: center
+}
+
+#footer li {
+	font-family: helvetica;
+	font-size: 16;
+	display: inline;
+	padding: 25px
+}
+
+#footer a {
+	color: #3480eb;
+	text-decoration: none;
+}
+
+#footer a:hover {
+	text-decoration: underline
 }
