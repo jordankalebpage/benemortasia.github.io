@@ -1,3 +1,7 @@
+body {
+	color: white;
+	background-color: #121212
+}
 
 div.container1 {
 	min-height: 10em;
