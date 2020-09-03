@@ -18,3 +18,11 @@ div.container1 p {
 	transform: translate(-50%, -50%);
 	font-size: 48
 }
+
+.footer {
+	position: fixed;
+	left: 0;
+	bottom: 5%;
+	width: 100%;
+	text-align: center
+}
