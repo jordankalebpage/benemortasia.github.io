@@ -1,15 +1,33 @@
+<!DOCTYPE html>
+
 <html>
 <head>
 <title>JKP Studios</title>
 <link rel="stylesheet" href="styles.css">
+<script type="text/javascript" src="./js/main_page.js"></script>
 </head>
 <body>
-<div class=container1>
-<p>Work In Progress
+
+<div id=darkmode_anchor>
+<p>Dark mode: </p>
 </div>
+
+<div id=header>
+<li><a href="http://jkpstudios.com">Home</a></li>
+<label class="darkmode">
+<input type="checkbox" id="darkmode_check" onclick="toggleTheme('dark');">
+<span class="slider"></span>
+</label>
+</div>
+
+<div class=container1>
+<p>Work In Progress</p>
+</div>
+
 <div id=footer>
 <li><a href="https://www.github.com/benemortasia" target="_blank">My Github</a></li>
 <li><a href="https://www.linkedin.com/in/benemort/" target="_blank">My LinkedIn</a></li>
 </div>
+
 </body>
 </html>

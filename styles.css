@@ -1,12 +1,27 @@
-body {
-	color: white;
-	background-color: #121212
+:root {
+	--background-primary: #fff;
+	--color-primary: #121212;
+}
+
+html[data-theme='dark'] {
+	--background-primary: #121212;
+	--color-primary: #fff;
+}
+
+html {
+	transition: color 300ms, background-color 300ms;
+	background: var(--background-primary);
+	color: var(--color-primary);
+}
+
+h1, h2, p {
+	color: var(--color-primary);
 }
 
 div.container1 {
 	min-height: 10em;
 	display: table-cell;
-	vertical-align: middle
+	vertical-align: middle;
 }
 
 div.container1 p {
@@ -17,7 +32,7 @@ div.container1 p {
 	margin-right: -50%;
 	transform: translate(-50%, -50%);
 	font-family: helvetica;
-	font-size: 48
+	font-size: 48px;
 }
 
 #footer {
@@ -26,14 +41,14 @@ div.container1 p {
 	left: 0;
 	bottom: 5%;
 	width: 100%;
-	text-align: center
+	text-align: center;
 }
 
 #footer li {
 	font-family: helvetica;
-	font-size: 16;
+	font-size: 16px;
 	display: inline;
-	padding: 25px
+	padding: 25px;
 }
 
 #footer a {
@@ -42,5 +57,104 @@ div.container1 p {
 }
 
 #footer a:hover {
-	text-decoration: underline
+	text-decoration: underline;
+}
+
+#darkmode_anchor {
+	display: block;
+	vertical-align: top;
+}
+
+#darkmode_anchor p {
+	margin: 0;
+	position: absolute;
+	top: 1px;
+	right: 1%;
+	font-family: helvetica;
+	text-align: center;
+}
+
+#header {
+	display: block;
+	position: fixed;
+	right: 2%;
+	top: 2%;
+	width: 100%;
+	text-align: right;
+}
+
+#header li {
+	font-family: helvetica;
+	font-size: 16px;
+	display: inline;
+	padding: 25px;
+}
+
+#header a {
+	color: #3480eb;
+	text-decoration: none;
+}
+
+#header a:hover {
+	text-decoration: underline;
+}
+
+#header p {
+	font-family: helvetica;
+	display: inline;
+	position: relative;
+	right: 2%;
+	top: 2%;
+}
+
+.darkmode {
+	position: relative;
+	display: inline-block;
+	width: 42px;
+	height: 22px;
+}
+
+.darkmode input {
+	opacity: 0;
+	width: 0;
+	height: 0;
+}
+
+.slider {
+	position: absolute;
+	cursor: pointer;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: #121212;
+	-webkit-transition: .4s;
+	transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 14px;
+  width: 14px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+input:checked + .slider {
+  background-color: #3480eb;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #3480eb;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(20px);
+  -ms-transform: translateX(20px);
+  transform: translateX(20px);
+  background-color: #121212;
 }
